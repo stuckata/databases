@@ -1,0 +1,26 @@
+﻿Common Database models
+======================
+Hierarchical database model
+Network model
+Relational model
+Entity–relationship model -> Enhanced entity–relationship model
+Object model
+Document model
+Entity–attribute–value model
+Star schema
+
+Hierarchical database model
+===========================
+The hierarchical database model is organized in a tree-like structure. The data records are connected to one another through links. Every record is a collection of fields and each field contain only one value. The entity type of a record defines which fields the record contains. A record in hierarchical database model corresponds to a row in realtional database model and an entity type corresponds to a table(relation). The hierarchical database model mandates that each child record has only one parent, whereas each parent record can have one or more child records, also known as one-to-many relationships. In order to retrieve data from a hierarchical database the whole tree needs to be traversed starting from the root node.
+
+Pros
+----
+Widely used in applications that require very high performance and availability such as banking and telecommunications
+Useful for storing geographic information and file systems
+
+Cons
+----
+Difficult or impossible to extend the data model
+Cannot force consistency between all logical entities
+Leads to query bias. Certain types of queries are easier to write and execute faster than others
+Could not describe well many-to-many or many-to-one relationship
