@@ -1,0 +1,10 @@
+﻿one-to-many
+===========
+many-to-many
+============
+many-to-one
+===========
+one-to-one
+==========
+others
+======
