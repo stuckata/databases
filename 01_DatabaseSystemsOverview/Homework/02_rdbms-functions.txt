@@ -1,0 +1,7 @@
+﻿What does RDBMS stands for?
+===========================
+RDBMS stands for Relational Database Management System.
+
+Which are the Main Functions Performed by a RDBMS?
+==================================================
+The most common use of RDBMSs is to implement CRUD – Create, Read, Update, and Delete – functionality. 
