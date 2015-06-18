@@ -1,0 +1,17 @@
+﻿What is the primary key? and Why do we need it?
+===============================================
+The PRIMARY KEY uniquely identifies each record in a database table.
+
+What is the foreign key? 
+========================
+A FOREIGN KEY in one table points to a PRIMARY KEY in another table.
+
+What is the purpose of foreign keys?
+====================================
+The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.
+The FOREIGN KEY constraint also prevents invalid data from being inserted into the foreign key column, because it has to be one of the values contained in the table it points to.
+
+What is the difference between a primary and foreign key?
+=========================================================
+Primary keys must contain UNIQUE values. A primary key column cannot contain NULL values. Most tables should have a primary key, and each table can have only ONE primary key.
+A FOREIGN KEY in one table points to a PRIMARY KEY in another table.

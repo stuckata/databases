@@ -1,3 +1,12 @@
-Define What is “Table” in Database Terms
-========================================
-A table is a collection of related data entries and it consists of columns and rows.
+What is “Table” in Database Terms
+=================================
+A table is a collection of related data entries and it consists of columns and rows. 
+
+How information is stored in tables?
+====================================
+Tables contain records (rows) with data.
+
+What is the difference between tables and relations?
+====================================================
+Each table is a metaphorical representation of an entity or object that is in a tabular format consisting of columns and rows. Columns are the fields of a record or the attributes of an entity. The rows contain the values or data instances. These are also called records or tuples.
+Relations exist both among the columns within a table and among the tables.
