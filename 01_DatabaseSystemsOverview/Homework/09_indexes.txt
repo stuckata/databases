@@ -1,0 +1,39 @@
+﻿What is index?
+============== 
+A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure. Indexes are used to quickly locate data without having to search every row in a database table every time a database table is accessed. Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access of ordered records.
+
+What indexing methods exist?
+============================
+Non-clustered
+Clustered
+
+What is clustered index? 
+========================
+Clustered Indexes are stored internal built-in the table.
+
+What is B-Tree? 
+===============
+B-tree is a tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. B-tree is optimized for read and write of large data blocks.
+
+What is column-store index? 
+===========================
+A columnstore index is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore.
+
+What is full-text search index? 
+===============================
+Full-text search refers to full-text queries against character-based data. These types of queries can include words and phrases as well as multiple forms of a word or phrase.
+
+What is spatial index? 
+======================
+A spatial database, or geodatabase is a database that is optimized to store and query data that represents objects defined in a geometric space such as points, lines and polygons, 3D objects, topological coverages, linear networks.
+
+What are the pros and cons of using indexes? 
+============================================
+Pros
+----
+Indexes allow the database application to find data fast without reading the whole table. They are used to speed up searches/queries. Efficient access of ordered records.
+
+Cons
+----
+Additional writes and storage space to maintain the index data structure.
+Updating a table with indexes takes more time than updating a table without (because the indexes also need an update).
