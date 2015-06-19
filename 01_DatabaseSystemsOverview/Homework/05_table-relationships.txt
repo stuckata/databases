@@ -1,10 +1,15 @@
 ﻿one-to-many
 ===========
+In this type of relationship, a row in table A can have many matching rows in table B, but a row in table B can have only one matching row in table A.
+
 many-to-many
 ============
+In a many-to-many relationship, a row in table A can have many matching rows in table B, and vice versa.
+
 many-to-one
 ===========
+This type of relationship is the opposite of one-to-many type.
+
 one-to-one
 ==========
-others
-======
+In a one-to-one relationship, a row in table A can have no more than one matching row in table B, and vice versa.
