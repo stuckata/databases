@@ -1,0 +1,9 @@
+﻿SQL language
+============
+SQL stands for Structured Query Language. SQL is a standard language for accessing databases. SQL can execute queries against a database, retrieve data from a database, insert records in a database, update records in a database, delete records from a database, create new databases, create new tables in a database, create stored procedures in a database, create views in a database, set permissions on tables, procedures and views.
+
+Example
+=======
+SELECT column_name,column_name
+FROM table_name
+WHERE column_name operator value;
