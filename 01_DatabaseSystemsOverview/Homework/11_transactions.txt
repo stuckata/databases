@@ -1,0 +1,11 @@
+﻿Database transactions
+=====================
+A transaction is a sequence of operations performed as a single logical unit of work.
+
+What is ACID transaction?
+=========================
+A logical unit of work must exhibit four properties, called the atomicity, consistency, isolation, and durability (ACID) properties, to qualify as a transaction.
+
+What is transaction log?
+========================
+If the server hardware, operating system, or the instance of the Database Engine itself fails, the instance uses the transaction logs to automatically roll back any uncompleted transactions to the point of the system failure.
