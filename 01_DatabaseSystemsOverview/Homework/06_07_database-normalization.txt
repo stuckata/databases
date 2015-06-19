@@ -1,0 +1,7 @@
+﻿Database schema normalization
+=============================
+Database normalization is the process of organizing the attributes and tables of a relational database to minimize data redundancy. Normalization involves defining foreign keys in the old table referencing the primary keys of the new ones. This way insertions will have only one presentation in table and unique key which will be used instead. 
+
+Advantages of Normalized Databases
+==================================
+The main advantage of database schema normalization is reducing data redundancy. Entity's unique ID is stored everywhere in the system but its name is held in only one table so the name can be updated more easily in one row of one table.
