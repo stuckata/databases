@@ -1,0 +1,9 @@
+﻿What is a NoSQL Database?
+=========================
+A NoSQL (often interpreted as Not only SQL) database provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases. Motivations for this approach include simplicity of design, horizontal scaling, and finer control over availability. The data structures used by NoSQL databases (e.g. key-value, graph, or document) differ from those used in relational databases, making some operations faster in NoSQL and others faster in relational databases. The particular suitability of a given NoSQL database depends on the problem it must solve.
+
+Examples of NoSQL databases
+===========================
+MongoDB - document-oriented database
+Redis - datastore
+Cassandra - column-oriented database with a key-value store
