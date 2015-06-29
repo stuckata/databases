@@ -1,0 +1,3 @@
+SELECT *
+FROM Users u
+WHERE CAST(u.LastLoginTime AS DATE) = CAST(GETDATE() AS DATE)
