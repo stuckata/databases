@@ -1,9 +1,8 @@
-CREATE TABLE Users (
-	Id INT IDENTITY,
-	Username NVARCHAR(50) UNIQUE NOT NULL,
-	UserPassword NVARCHAR(100) NOT NULL,
-	FullName NVARCHAR(200) NOT NULL,
-	LastLoginTime DATETIME DEFAULT GETDATE(),
-	CHECK(UserPassword > 4),
-	CONSTRAINT PK_Users PRIMARY KEY(Id))
-GO
+CREATE TABLE Users 
+	(
+	Id int NOT NULL IDENTITY PRIMARY KEY,
+	Username nvarchar(50) UNIQUE NOT NULL,
+	UserPassword nvarchar(100) NOT NULL CHECK(LEN(UserPassword) > 4),
+	FullName nvarchar(200) NOT NULL,
+	LastLoginTime datetime DEFAULT GETDATE()
+	)
