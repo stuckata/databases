@@ -4,5 +4,5 @@ CREATE TABLE Users
 	Username NVARCHAR(50) UNIQUE NOT NULL,
 	UserPassword NVARCHAR(100) NOT NULL CHECK(LEN(UserPassword) > 4),
 	FullName NVARCHAR(200) NOT NULL,
-	LastLoginTime DATETIME NOT NULL
+	LastLoginTime DATE NOT NULL
 	)

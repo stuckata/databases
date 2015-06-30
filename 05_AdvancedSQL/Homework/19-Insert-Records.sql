@@ -11,13 +11,13 @@ INSERT INTO Groups
 VALUES('Open Course')
 
 INSERT INTO Users
-VALUES('kircata', 'ggggtttt', 'Kiril Dobruschiev', '2015-06-29 00:00:00.000', 1)
+VALUES('kircata', 'ggggtttt', 'Kiril Dobruschiev', '2015-06-29', 1)
 
 INSERT INTO Users
-VALUES('cookie', 'chiesecake', 'Sladka Brashnova', '2015-06-29 00:00:00.000', 2)
+VALUES('cookie', 'chiesecake', 'Sladka Brashnova', '2015-06-29', 2)
 
 INSERT INTO Users
-VALUES('zizi', 'zzzzzlk', 'Zaspala Lekinkova', '2015-06-29 00:00:00.000', 3)
+VALUES('zizi', 'zzzzzlk', 'Zaspala Lekinkova', '2015-06-29', 3)
 
 INSERT INTO Users
-VALUES('jimi', 'juju567', 'Djimi Sladoledov', '2015-06-29 00:00:00.000', 4)
+VALUES('jimi', 'juju567', 'Djimi Sladoledov', '2015-06-29', 4)
