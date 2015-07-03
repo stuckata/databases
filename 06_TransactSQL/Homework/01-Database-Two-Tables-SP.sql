@@ -61,3 +61,5 @@ AS
   SELECT p.FirstName + ' ' + p.LastName AS [Full Name]
   FROM Persons p
 GO
+
+EXEC usp_SelectPersonsFullName
