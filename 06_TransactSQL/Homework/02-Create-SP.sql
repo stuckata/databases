@@ -10,4 +10,6 @@ AS
   WHERE a.Balance > @balance
 GO
 
+EXEC usp_SelectBalance
+
 EXEC usp_SelectBalance 3000.00
