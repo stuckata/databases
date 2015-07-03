@@ -1,4 +1,7 @@
-CREATE DATABASE TestSP;
+CREATE DATABASE TestSP
+GO
+
+USE TestSP
 GO
 
 CREATE TABLE Persons
@@ -7,13 +10,54 @@ Id INT NOT NULL IDENTITY PRIMARY KEY,
 FirstName NVARCHAR(50) NOT NULL,
 LastName NVARCHAR(50) NOT NULL,
 SSN NVARCHAR(10) NOT NULL
-);
+)
 GO
 
 CREATE TABLE Accounts
 (
 Id INT NOT NULL IDENTITY PRIMARY KEY,
 PersonId INT NOT NULL FOREIGN KEY REFERENCES Persons(Id),
-Balance MONEY NOT NULL DEFAULT 0.00
-);
+Balance MONEY
+)
+GO
+
+INSERT INTO Persons
+VALUES ('Ivan', 'Ivanov', '8844668810')
+GO
+
+INSERT INTO Persons
+VALUES ('Jivka', 'Vasileva', '9947581066')
+GO
+
+INSERT INTO Persons
+VALUES ('Zinedin', 'Zidan', '2147896325')
+GO
+
+INSERT INTO Persons
+VALUES ('Messi', 'Petrov', '5456289317')
+GO
+
+INSERT INTO Accounts
+VALUES (1, 0.00)
+GO
+
+INSERT INTO Accounts
+VALUES (2, 2254.14)
+GO
+
+INSERT INTO Accounts
+VALUES (3, 87945.61)
+GO
+
+INSERT INTO Accounts
+VALUES (4, 248874.10)
+GO
+
+USE TestSP
+GO
+
+CREATE PROC dbo.usp_SelectPersonsFullName
+AS
+  SELECT p.FirstName + ' ' + p.LastName AS [Full Name]
+  FROM Persons p
 GO
