@@ -15,5 +15,7 @@ FOR UPDATE
 AS
 	INSERT INTO Logs(AccountId, OldSum, NewSum)
 	SELECT i.Id, d.Balance, i.Balance
-	FROM deleted d, inserted i
+	FROM DELETED d, INSERTED i
 GO
+
+EXEC usp_DepositMoney 3, 1000.00
