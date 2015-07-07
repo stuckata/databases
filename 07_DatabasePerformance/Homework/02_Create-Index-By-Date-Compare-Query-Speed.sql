@@ -1,0 +1,14 @@
+USE TestPerformance
+GO
+
+CREATE INDEX DIndex
+ON TestData (TestDate)
+GO
+
+DBCC DROPCLEANBUFFERS
+GO
+
+SELECT t.TestDate AS [Date 2008 - 2010]
+FROM TestData t
+WHERE t.TestDate BETWEEN '2008-01-01' AND '2010-01-01'
+GO
