@@ -5,19 +5,32 @@ CREATE TABLE tests_data (
     PRIMARY KEY (Id)
 );
 
+DELIMITER $$;
 
+CREATE PROCEDURE populate_table()
 BEGIN
-	DECLARE rows_num INT DEFAULT 10000000
-	SET rows_num = 10000000
+	DECLARE rows_num INT;
+	SET rows_num = 1000000;
 
-	WHILE rowsNum > 0 DO
+	WHILE rows_num > 0 DO
 			BEGIN
-				DECLARE test_date DATE = DATEADD(DAY, (ABS(CHECKSUM(NEWID())) % 5475), '2000-01-01')
-				DECLARE test_text NVARCHAR(20) = SUBSTRING(CONVERT(NVARCHAR(50), NEWID()),0,9)
+				DECLARE test_date DATE;
+                DECLARE test_text NVARCHAR(20);
+                SET test_date = CURRENT_TIMESTAMP - INTERVAL FLOOR(RAND() * 5475) DAY;
+                SET test_text = SUBSTRING(MD5(RAND()), -8);
 				
-				INSERT INTO tests_data
-				VALUES(test_date, test_text)
-				SET rows_num = rows_num - 1
-			END
-	END WHILE
-END
+				INSERT INTO tests_data (TestDate, TestText)
+				VALUES (test_date, test_text);
+                
+				SET rows_num = rows_num - 1;
+			END;
+	END WHILE;
+END;
+
+DELIMITER ;
+
+DROP PROCEDURE populate_table;
+
+DELIMITER ;
+
+CALL populate_table();
