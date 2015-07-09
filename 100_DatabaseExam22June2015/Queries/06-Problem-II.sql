@@ -1,8 +1,12 @@
-SELECT t.TeamName AS [Team Name], l.LeagueName AS [League], ISNULL(c.CountryName, 'International') AS [League Country]
+SELECT t.TeamName AS [Team Name], l.LeagueName AS [League], 
+	CASE 
+		WHEN l.CountryCode IS NULL THEN 'International'
+		ELSE c.CountryName
+	END AS [League Country]
 FROM Teams t
-LEFT JOIN Leagues_Teams lt
+INNER JOIN Leagues_Teams lt
 ON t.Id = lt.TeamId
-LEFT JOIN Leagues l
+INNER JOIN Leagues l
 ON lt.LeagueId = l.Id
 LEFT JOIN Countries c
 ON l.CountryCode = c.CountryCode
