@@ -10,4 +10,4 @@ INNER JOIN Leagues l
 ON lt.LeagueId = l.Id
 LEFT JOIN Countries c
 ON l.CountryCode = c.CountryCode
-ORDER BY t.TeamName
+ORDER BY t.TeamName, l.LeagueName
