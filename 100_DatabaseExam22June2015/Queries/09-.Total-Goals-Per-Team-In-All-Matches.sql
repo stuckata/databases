@@ -1,8 +1,11 @@
-SELECT t.TeamName, ISNULL(SUM(tmh.HomeGoals), 0) + ISNULL(SUM(tma.AwayGoals), 0) AS [Total Goals]
+SELECT t.TeamName, ISNULL(SUM(TeamGoals.Goals), 0) AS [Total Goals]
 FROM Teams t
-LEFT JOIN TeamMatches tmh
-ON t.Id = tmh.HomeTeamId
-LEFT JOIN TeamMatches tma
-ON t.Id = tma.AwayTeamId
+LEFT JOIN(
+			SELECT tmh.HomeTeamId AS TeamId, tmh.HomeGoals AS Goals
+			FROM TeamMatches tmh
+			UNION ALL
+			SELECT tma.AwayTeamId, tma.AwayGoals
+			FROM TeamMatches tma) AS TeamGoals
+ON TeamGoals.TeamId = t.Id
 GROUP BY t.TeamName
 ORDER BY [Total Goals] DESC, t.TeamName
